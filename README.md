@@ -31,8 +31,7 @@ This project is simple Lorem ipsum dolor generator.
          >>Verify Jetson Nan0 4GB. 64GB-SD.          
        
         | Application          | Verify By                                                                                                                                 |
-        | ---                  | ---                                                                                                                                       |
-        | CMake >= 3.10        | cmake --version`                                                                                                                          |
+        | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |        	    | CMake >= 3.10        | cmake --version`                                                                                                                          |
         | Qt 5                 | qmake --version                                                                                                                           | 
         | OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                                                          |
         | C++ 17 compiler      |  gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}'                                                               |                                        
