@@ -1,51 +1,59 @@
 # Driver-Utilities-Jetson-nano
 This is a presentation based on an ADAS project which elaberate some missing utilities for drivers:
-Driver Utilities: Forward Collision , Lane departure, Traffic sign detection  &amp; Over speed 
+Driver Utilities: Forward Collision , Lane departure, Traffic sign detection  &amp; Over speed 
 STILL WORKING ON
 
 ## Table of Contents
 
-    * [System Setup](#System-Setup)
-    * [Walkthroughs](#Walkthroughs)
-    * [API Reference](#API-Reference)
-    * [Code Examples](#Code Examples) - Scope of functionalities 
-    * [Pre-Trained Models (?)](#Pre-Trained-Models)
-    * [Extra Resources](#Extra-Resources)
-    * [Future improvments](#Future-improvments)
+    ### System Setup  
+    ### Walkthroughs  
+    ### PI Reference  
+    ### Code Example - Scope of functionalities       
+    ### Pre-Trained Models (?)  
+    ### Extra Resources    
+    ### Future improvements  
     
-## System Setup
-  ### Jetson Nano set-up
-        Set-up the jetson nano from:  Getting Started with Jetson Nano Developer Kit, follow the explanations of how to flash SD
-  ### System Requirements
-        1. Check the project requirements, and verify the HW & SW are satisfied:
-           Support python 3.6.9.
-           Requirements:
-              a. CMake >= 3.10     >> cmake --version
-              b. Qt 5              >> qmake --version
-              c. OpenCV >= 4.0.1   >> opencv: /usr/bin/opencv_version
-              d. C++ 17 compiler   >> gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}' 
-                                                   >> in the list should be c++17. The gcc --version command or g++ does not reveal the version of C++ compiler
-              e. protobuf 3.6.1>>> pip3 show protobuf
-              f. CUDA 10.1 or 10.2 >> nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt
-                  [nvidia-smi >> command does not supported on tagra architecture]
-              g.TensorRT 5.1.5-1 (for CUDA cuda10.1) - TensorRT 6.0.1.8 (for CUDA 10.2)
-                  [This project should work with TensorRT 5 and TensorRT 6. TensorRT 7 is not supported for now].
-          2. If the requirements not met:
-             a. For Qt & OpenCv follow ReadMe on https://github.com/vietanhdev/open-adas
-             b. For Cmake installation, Follow:XXXXXXXXXXXX
-             C. If C++ compiler is not as required , The project probably will not run. Should be tested.
-             d. For protobuf do: 1. git clone https://github.com/protocolbuffers/protobuf -bv3.6.1
-                                 2. cd protobuf
-                                 3. autoreconf -if
-                                 4. ./configure
-                                 5. make
-                                 6. make install
-             e. For CUDA : YYYYYYYYY
-             f. For TensorRT: a. For installation: ZZZZZZZZZZZ
-                              b. One of 3 elements is a tar file, that provides more flexibility, such as installing multiple versions of TensorRT at the same time. 
-                                 In the case of the Uploading version - it's
+    
+## System Setup #  
+  ### Jetson Nano set-up #  
+      Set-up the jetson nano from: ![follow explanations Here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       \
+  ### System Requirements #       
+      A. Verify requirements:  
+         Install python 3.6.9.  
+   > > Ubuntu 18.04.  
+   > > Nvidia Jetson Nano 4GB , SD 64 GB.  
+         
+         a. CMake >= 3.10   <t>  > > cmake --version    \
+         b. Qt 5           <t>   > > qmake --version     \
+         c. OpenCV >= 4.0.1 <t>  > > opencv: /usr/bin/opencv_version    \
+         d. C++ 17 compiler      > > gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}'  
+                                                   >> Find c++17 in the list.                
+         e. protobuf 3.6.1       > > pip3 show protobuf    
+         f. CUDA 10.1 or 10.2    > > nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt   
+                                                    >> [nvidia-smi >> command does not support tagra architecture]      
+         g. TensorRT 5.1.5-TensorRT 6.0.1.8 (compactable to CUDA version) > >    
+                                                   >> [TensorRT 7 is not supported for now].  
 
-         3. Getting the Project - Build the Project from Source 
+      B. You can use this Installation list where gaps are found out:      
+         a. [For Qt & OpenCv follow] (https://github.com/vietanhdev/open-adas) [OR this] (https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html
+)
+         b. For Cmake installation, Follow:XXXXXXXXXXXX  
+         C. If C++ compiler is not as required , The project probably will not run. Should be tested.  
+         d. For protobuf do:   
+                             '''
+                             git clone https://github.com/protocolbuffers/protobuf -bv3.6.1  
+                             cd protobuf  
+                             autoreconf -if  
+                             ./configure  
+                             make  
+                             make install 
+                             '''
+         e. For CUDA : The requirements are for CUDA 10.1 or CUDA 10.2.. [FOR CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130)                           use the necessary adaptations for the CUDA 102. version.  
+         f. For TensorRT: One of 3 elements is a tar file, that provides more flexibility, such as installing multiple versions of TensorRT at the same time.  
+                              Since in this project we needed to downgrade the version, we took this approach and kept 2 versions of TensorRT, due to dependencies complex.  
+      C. Build the Project from Source  
+
+
       
 ## Walkthrough
 ## API Reference
