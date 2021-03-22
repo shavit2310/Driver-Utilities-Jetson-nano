@@ -30,16 +30,28 @@ STILL WORKING ON
         | Qt 5                 | qmake --version                                                                                                                           | 
         | OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                                                          |
         | C++ 17 compiler      |  gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}'                                                               |                                        
-        |                                               >> Find c++17 in the list.                                                                                         | 
+        |                                                  >> Find c++17 in the list.                                                                                      | 
         | protobuf 3.6.1       | pip3 show protobuf                                                                                                                        |
         | CUDA 10.1 or 10.2    | nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt                                                     |
-                                                        >> [nvidia-smi >> command does not support tagra]                                                                  |  
-        | TensorRT 5.1.5       | YYYTTTTTTTTTT  >> [TensorRT 7 is not supported for now].                                                                                  |
+                                                           >> [nvidia-smi >> command does not support tagra]                                                               |  
+        | TensorRT 5.1.5       |  dpkg -l | grep TensorRT  >> [TensorRT 7 is not supported for now].                                                                       |
         |   OR 6.0.1.8         |                                                                                                                                           | 
 
       B. You can use this Installation list where gaps are found out:      
          a. ![For Qt & OpenCv follow] (#https://github.com/vietanhdev/open-adas) ![OR](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)  
-         b. For Cmake installation, Follow:XXXXXXXXXXXX  
+         b. For Cmake installation, '''  
+                                    sudo apt-get install software-properties-common
+                                    sudo add-apt-repository ppa:george-edison55/cmake-3.x
+                                    sudo apt-get update.         When cmake is not yet installed:
+                                    sudo apt-get install cmake.  When cmake is already installed:
+                                    sudo apt-get upgrade
+                                    sudo apt-get install build-essential
+                                    wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
+                                    tar xf cmake-3.2.2.tar.gz
+                                    cd cmake-3.2.2
+                                    ./configure
+                                    make
+                                    '''
          c. If C++ compiler is not as required , The project probably will not run. Should be tested.  
          d. For protobuf do: 
             '''
