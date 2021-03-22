@@ -18,16 +18,11 @@ STILL WORKING ON
   ### Jetson Nano set-up #  
       Set-up the jetson nano from: ![follow explanations Here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       \
   ### System Requirements #       
-      A. Verify requirements: 
-         Verify requirements: 
-         Verify requirements: 
-         Verify requirements: 
-
-      
-          Verify python =>3.6.9.    
-          Verify  Ubunru 18.04.  \
-          Verify Jetson Nan0 4GB. 64GB-SD.   
-
+      A. Verify requirements:               
+         >>Verify python =>3.6.9.             
+         >>Verify  Ubunru 18.04.          
+         >>Verify Jetson Nan0 4GB. 64GB-SD.  
+         
        
         | Application          | Verify By                                                                                                                                 |
         | ---                  | ---                                                                                                                                       |
@@ -43,8 +38,8 @@ STILL WORKING ON
         |   OR 6.0.1.8         |                                                                                                                                           | 
 
       B. You can use this Installation list where gaps are found out:      
-         1.  ![For Qt & OpenCv follow](#https://github.com/vietanhdev/open-adas) OR ![here](#https://github.com/vietanhdev/open-adas)  \ 
-         3. For Cmake installation, 
+         1.  ![For Qt & OpenCv follow](#https://github.com/vietanhdev/open-adas) OR ![here](#https://github.com/vietanhdev/open-adas)  \
+         2.  For Cmake installation, 
 
             $ sudo apt-get install software-properties-common
             $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
@@ -64,12 +59,10 @@ STILL WORKING ON
             $ git clone https://github.com/protocolbuffers/protobuf -bv3.6.1 
             $ cd protobuf
             $ autoreconf -if  
-                  $ autoreconf -if  
             $ ./configure
             $ nake
             $ make install      
             
-        
          5. For CUDA :  [FOR CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), use the necessary adaptations for CUDA 10.2.  
          6. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
                          Since in this project we needed to downgrade the version, we took this approach and kept 2 versions of TensorRT. 
@@ -79,16 +72,16 @@ STILL WORKING ON
       By default, Ubuntu comes with the libpython-dev and python-numpy packages pre-installed. These development packages are required for the bindings to build using the 
       Python C API. So, if you want the project to create bindings for Python 3.6, install these packages before proceeding:
 
-         $ sudo apt-get install libpython3-dev python3-numpy
+           $ sudo apt-get install libpython3-dev python3-numpy
 
       Configuring with CMake
       Next, create a build directory within the project and run cmake to configure the build. When cmake is run, a script is launched (CMakePreBuild.sh) that will install 
       any required dependencies and download DNN models for you.
       
-      $ cd AAAAAAA   
-      $ mkdir build
-      $ cd build
-      $ cmake ../
+            $ cd AAAAAAA   
+            $ mkdir build
+            $ cd build
+            $ cmake ../
 
     note: this command will launch the CMakePreBuild.sh script which asks for sudo privileges while installing some prerequisite packages on the Jetson. 
     The script also downloads pre-trained networks from web services.
@@ -98,10 +91,10 @@ STILL WORKING ON
 
    Then run make followed by sudo make install to build the libraries, Python extension bindings, and code samples:
 
-   $ cd DDDDDDDDD/build          # omit if working directory is already build/ from above
-   $ make
-   $ sudo make install
-   $ sudo ldconfig
+            $ cd DDDDDDDDD/build          # omit if working directory is already build/ from above
+            $ make
+            $ sudo make install
+            $ sudo ldconfig
 
    The project will be built to jetson-inference/build/aarch64, with the following directory structure:
 
