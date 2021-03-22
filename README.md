@@ -18,10 +18,13 @@ This project is simple Lorem ipsum dolor generator.
 ## SetUp
 This project is simple Lorem ipsum dolor generator.
 	
-  ### Jetson Nano set-up   
+  ### Jetson Nano set-up   
+
       Set-up the jetson nano from: ![follow explanations Here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       \
-  ### System Requirements        
-      A. Verify requirements:               
+  ### System requerments   
+
+      A. Verify requirements:     
+
          >>Verify python =>3.6.9.             
          >>Verify  Ubunru 18.04.          
          >>Verify Jetson Nan0 4GB. 64GB-SD.          
