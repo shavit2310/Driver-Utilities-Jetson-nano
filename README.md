@@ -20,8 +20,9 @@ STILL WORKING ON
   ### System Requirements #       
       A. Verify requirements:  
          Verify python =>3.6.9.  \
-         Verify Ubuntu 18.04.  \
-         Verify Jetson Nan0 4GB. 64GB-SD.  
+         Verify Jetson Nan0 4GB. 64GB-SD.
+         Verify Ubunru 18.04  \
+
        
         | Application          | Verify By                                                                                                                                 |
         | ---                  | ---                                                                                                                                       |
@@ -37,7 +38,7 @@ STILL WORKING ON
         |   OR 6.0.1.8         |                                                                                                                                           | 
 
       B. You can use this Installation list where gaps are found out:      \
-         a. [For Qt & OpenCv follow] (#https://github.com/vietanhdev/open-adas) [OR](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)  \
+         a. ![For Qt & OpenCv follow] (#https://github.com/vietanhdev/open-adas) ![OR](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)  \
          b. For Cmake installation, Follow:XXXXXXXXXXXX  \
          c. If C++ compiler is not as required , The project probably will not run. Should be tested.  
          d. For protobuf do: 
