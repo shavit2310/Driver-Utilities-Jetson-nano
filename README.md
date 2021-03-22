@@ -1,18 +1,18 @@
 # Driver-Utilities-Jetson-nano
-This is a presentation based on an ADAS project which elaberate some missing utilities for drivers:
+This is a presentation based on an ADAS project which elaborate some missing utilities for drivers:
 Driver Utilities: Forward Collision , Lane departure, Traffic sign detection  &amp; Over speed 
-STILL WORKING ON
+STILL WORKING ON       
 
 ## Table of Contents
 * [General info](#general-info)
 * [Setup](#setup)
-* [WalkThroug](#WalkThroug)
-* [API REFRENCE](#API-REFERENCE)
+* [WalkThrough](#WalkThrough)
+* [API REFERENCE](#API-REFERENCE)
 * [Code example](#Code-example)
-* [Pre-traind Models-?](#Pre-traind-Models-?)
+* [Pre-trained Models-?](#Pre-trained-Models-?)
 * [Extra Resources](#Extra-Resources)
 * [Future improvements](#Future-improvements)
-
+    
 ## General info
 This project is simple Lorem ipsum dolor generator.
 ## SetUp
@@ -22,22 +22,19 @@ This project is simple Lorem ipsum dolor generator.
 
       Set-up the jetson nano from the: ![explanations here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       
   
-  ### System requerments   
+  ### System requirements   
 
       A. Verify requirements:     
 
          >>Verify python =>3.6.9.             
-         >>Verify  Ubunru 18.04.          
+         >>Verify  Ubuntu 18.04.          
          >>Verify Jetson Nan0 4GB. 64GB-SD.          
        
         | Application          | Verify By                                                                                         |
-        | -------------------- | ------------------------------------------------------------------------------------------------- |
-	
+        | -------------------- | ------------------------------------------------------------------------------------------------- |	
         | Cmake >= 3.1         | cmake --version                                                                                   |
-	
-	| Qt 5                 | qmake --version                                                                                   | 
-	
-        | OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                  |
+        | Qt 5                 | qmake --version
+	| OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                  |
         | C++ 17 compiler      |  gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}'                       |                                        
         |                                                  >> Find c++17 in the list.                                              | 
         | protobuf 3.6.1       | pip3 show protobuf                                                                                |
@@ -70,12 +67,13 @@ This project is simple Lorem ipsum dolor generator.
             $ cd protobuf
             $ autoreconf -if  
             $ ./configure
-            $ nake
+            $ make
             $ make install      
             
-         5. For CUDA :  ![FOR CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), use the necessary adaptations for CUDA 10.2.  
-         6.  
-         7. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
+         5. For CUDA :  ![Version CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), 
+                        Make necessary adaptations if CUDA 10.2 is required.     
+
+         6. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
                          Since in this project we needed to downgrade the version, we took this approach and kept 2 versions of TensorRT. 
     
    ### Build the Project from Source  
@@ -86,7 +84,7 @@ This project is simple Lorem ipsum dolor generator.
 
               $ sudo apt-get install libpython3-dev python3-numpy
 
-         Configuring with CMake
+         Configuring CMake
          Next, create a build directory within the project and run cmake to configure the build. When cmake is run, a script is launched (CMakePreBuild.sh) that will install 
          any required dependencies and download DNN models for you.
 
@@ -108,7 +106,7 @@ This project is simple Lorem ipsum dolor generator.
                $ sudo make install
                $ sudo ldconfig
 
-      The project will be built to jetson-inference/build/aarch64, with the following directory structure:
+      The project will be built to XXXXX/build/aarch64, with the following directory structure:
 
       |-build
          \aarch64
@@ -121,22 +119,22 @@ This project is simple Lorem ipsum dolor generator.
       In the build tree, you can find the binaries residing in build/aarch64/bin/, headers in build/aarch64/include/, and libraries in build/aarch64/lib/. 
       These also get installed under /usr/local/ during the sudo make install step.
 
-      The Python bindings for the PRGECT and jetson.utils modules also get installed during the sudo make install step under /usr/lib/python*/dist-packages/. 
+      The Python bindings for the PROJECT and jetson.utils modules also get installed during the sudo make install step under /usr/lib/python*/dist-packages/. 
       If you update the 
-      code, remember to run it again.
+      code, remember to run it again.    
  
  ## WalkThrough
 This project is simple Lorem ipsum dolor generator.
 		    
    Digging Into the Code
 
-## API REFRENCE
+## API REFERENCE
 Python
   Image Recognition 	imageNet 	
-  Object Detection 	 	detectNet
-  Segmentation 	 	    segNet
+  Object Detection 	 detectNet
+  Segmentation 	 	 segNet
 
-  These libraries are able to be used in external projects by linking to libjetson-inference and libjetson-utils.
+  These libraries are able to be used in external projects by linking to ZZZZZ and XXXXX.
 
 ## Code example
   Introductory code walkthroughs of using the library are covered during these steps of the Hello AI World tutorial:
