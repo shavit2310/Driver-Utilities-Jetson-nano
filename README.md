@@ -38,8 +38,8 @@ STILL WORKING ON
         |   OR 6.0.1.8         |                                                                                                                                           | 
 
       B. You can use this Installation list where gaps are found out:      
-         1. ![For Qt & OpenCv follow] (#https://github.com/vietanhdev/open-adas) ![OR](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)  
-         2. For Cmake installation, 
+         1.  ![For Qt & OpenCv follow](#https://github.com/vietanhdev/open-adas) ![OR here](#https://github.com/vietanhdev/open-adas) 
+         3. For Cmake installation, 
 
             $ sudo apt-get install software-properties-common
             $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
