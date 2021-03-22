@@ -18,10 +18,15 @@ STILL WORKING ON
   ### Jetson Nano set-up #  
       Set-up the jetson nano from: ![follow explanations Here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       \
   ### System Requirements #       
-      A. Verify requirements:     
-          Verify python =>3.6.9.  \  
+      A. Verify requirements: 
+         Verify requirements: 
+         Verify requirements: 
+         Verify requirements: 
+
+      
+          Verify python =>3.6.9.    
           Verify  Ubunru 18.04.  \
-          Verify Jetson Nan0 4GB. 64GB-SD.  \ 
+          Verify Jetson Nan0 4GB. 64GB-SD.   
 
        
         | Application          | Verify By                                                                                                                                 |
@@ -38,7 +43,7 @@ STILL WORKING ON
         |   OR 6.0.1.8         |                                                                                                                                           | 
 
       B. You can use this Installation list where gaps are found out:      
-         1.  ![For Qt & OpenCv follow](#https://github.com/vietanhdev/open-adas) ![OR here](#https://github.com/vietanhdev/open-adas) 
+         1.  ![For Qt & OpenCv follow](#https://github.com/vietanhdev/open-adas) OR ![here](#https://github.com/vietanhdev/open-adas)  \ 
          3. For Cmake installation, 
 
             $ sudo apt-get install software-properties-common
