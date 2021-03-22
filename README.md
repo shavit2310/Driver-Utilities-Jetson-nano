@@ -31,9 +31,12 @@ This project is simple Lorem ipsum dolor generator.
          >>Verify Jetson Nan0 4GB. 64GB-SD.          
        
         | Application          | Verify By                                                                                         |
-        | -------------------- | ------------------------------------------------------------------------------------------------- | 
+        | -------------------- | ------------------------------------------------------------------------------------------------- |
+	
         | Cmake >= 3.1         | cmake --version                                                                                   |
+	
 	| Qt 5                 | qmake --version                                                                                   | 
+	
         | OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                  |
         | C++ 17 compiler      |  gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}'                       |                                        
         |                                                  >> Find c++17 in the list.                                              | 
@@ -70,7 +73,8 @@ This project is simple Lorem ipsum dolor generator.
             $ nake
             $ make install      
             
-         5. For CUDA :  ![FOR CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), use the necessary adaptations for CUDA 10.2. 
+         5. For CUDA :  ![FOR CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), use the necessary adaptations for CUDA 10.2.  
+         6.  
          7. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
                          Since in this project we needed to downgrade the version, we took this approach and kept 2 versions of TensorRT. 
     
