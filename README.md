@@ -34,12 +34,12 @@ This project is simple Lorem ipsum dolor generator.
         | -------------------- | ------------------------------------------------------------------------------------------------- |	
         | Cmake >= 3.1         | cmake --version                                                                                   |
         | Qt 5                 | qmake --version                                                                                   |                                                                                      
-       	| OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                  |
+    	| OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                  |
         | C++ 17 compiler      | gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}'                        |                                        
         |                                                  >> Find c++17 in the list.                                              | 
         | protobuf 3.6.1       | pip3 show protobuf                                                                                |
         | CUDA 10.1 or 10.2    | nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt             |
-                                                           >> [nvidia-smi >> command does not support tagra]                       |  
+        !                      |                           >> [nvidia-smi >> command does not support tagra]                       |  
         | TensorRT 5.1.5       |  dpkg -l | grep TensorRT  >> [TensorRT 7 is not supported for now].                               |
         |   OR 6.0.1.8         |                                                                                                   | 
 
