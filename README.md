@@ -20,7 +20,8 @@ This project is simple Lorem ipsum dolor generator.
 	
   ### Jetson Nano set-up   
 
-      Set-up the jetson nano from: ![follow explanations Here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       \
+      Set-up the jetson nano from: ![follow explanations Here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       
+  
   ### System requerments   
 
       A. Verify requirements:     
