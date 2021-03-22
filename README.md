@@ -121,6 +121,32 @@ This project is simple Lorem ipsum dolor generator.
       The Python bindings for the PROJECT and jetson.utils modules also get installed during the sudo make install step under /usr/lib/python*/dist-packages/. 
       If you update the 
       code, remember to run it again.    
+      
+      FOR B&R 
+      II. Build and Run
+1. Clone the source code
+cd ~
+mkdir Works
+cd Works
+git clone https://github.com/vietanhdev/open-adas2. Update GPU_ARCHS
+Find these lines in CMakeLists.txt:
+# Set GPU architecture. This decides which instruction set will be used for
+GPU code.
+set(GPU_ARCHS 75) ## config your GPU_ARCHS,See [here]
+(https://developer.nvidia.com/cuda-gpus) for finding what maximum compute
+capability your specific GPU supports.
+Replace 75 with 72 for Jetson Xavier. Please read more on this link.
+3. Download models and sample data
+Download models and sample data here and extract to open-adas/models and open-adas/data.
+4. Build
+mkdir build
+cd build
+cmake ..
+make -j4
+5. Run
+cd ~/Works/open-adas/build/bin
+bash setup_vcan.sh
+./OpenADA
  
  ## WalkThrough
 This project is simple Lorem ipsum dolor generator.
