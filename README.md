@@ -18,10 +18,10 @@ STILL WORKING ON
   ### Jetson Nano set-up #  
       Set-up the jetson nano from: ![follow explanations Here](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)       \
   ### System Requirements #       
-      A. Verify requirements:  
-         Verify python =>3.6.9.  
-         Verify Jetson Nan0 4GB. 64GB-SD.
-         Verify Ubunru 18.04  
+      A. Verify requirements:     
+          Verify python =>3.6.9.  \  
+          Verify  Ubunru 18.04.  \
+          Verify Jetson Nan0 4GB. 64GB-SD.  \ 
 
        
         | Application          | Verify By                                                                                                                                 |
@@ -38,33 +38,35 @@ STILL WORKING ON
         |   OR 6.0.1.8         |                                                                                                                                           | 
 
       B. You can use this Installation list where gaps are found out:      
-         a. ![For Qt & OpenCv follow] (#https://github.com/vietanhdev/open-adas) ![OR](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)  
-         b. For Cmake installation, '''  
-                                    sudo apt-get install software-properties-common
-                                    sudo add-apt-repository ppa:george-edison55/cmake-3.x
-                                    sudo apt-get update.         When cmake is not yet installed:
-                                    sudo apt-get install cmake.  When cmake is already installed:
-                                    sudo apt-get upgrade
-                                    sudo apt-get install build-essential
-                                    wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
-                                    tar xf cmake-3.2.2.tar.gz
-                                    cd cmake-3.2.2
-                                    ./configure
-                                    make
-                                    '''
-         c. If C++ compiler is not as required , The project probably will not run. Should be tested.  
-         d. For protobuf do: 
-            '''
-            git clone https://github.com/protocolbuffers/protobuf -bv3.6.1  
-            cd protobuf  
-            autoreconf -if  
-            ./configure  
-            make  
+         1. ![For Qt & OpenCv follow] (#https://github.com/vietanhdev/open-adas) ![OR](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)  
+         2. For Cmake installation, 
+
+            $ sudo apt-get install software-properties-common
+            $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
+            $ sudo apt-get update.         When cmake is not yet installed:
+            $ sudo apt-get install cmake.  When cmake is already installed:
+            $ sudo apt-get upgrade
+            $ sudo apt-get install build-essential
+            $ wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
+            $  tar xf cmake-3.2.2.tar.gz
+            $ cd cmake-3.2.2
+            $ ./configure
+            $ cmake
+
+         3. If C++ compiler is not as required , The project probably will not run. Should be tested.  
+         4. For protobuf do: 
+
+            $ git clone https://github.com/protocolbuffers/protobuf -bv3.6.1 
+            $ cd protobuf
+            $ autoreconf -if  
+                  $ autoreconf -if  
+            $ ./configure
+            $ nake
+            $ make install      
             
-            make install 
-            '''  
-         e. For CUDA :  [FOR CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), use the necessary adaptations for CUDA 10.2.  
-         f. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
+        
+         5. For CUDA :  [FOR CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), use the necessary adaptations for CUDA 10.2.  
+         6. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
                          Since in this project we needed to downgrade the version, we took this approach and kept 2 versions of TensorRT. 
     
     C. Build the Project from Source  
