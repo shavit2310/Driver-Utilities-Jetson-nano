@@ -1,21 +1,24 @@
 # Driver-Utilities-Jetson-nano
-This is apresentation of an ADAS project which elaberate some missing utilities for drivers:
+This is a presentation based on an ADAS project which elaberate some missing utilities for drivers:
 Driver Utilities: Forward Collision , Lane departure, Traffic sign detection  &amp; Over speed 
+STILL WORKING ON
 
-Table of Contents
+## Table of Contents
 
-    System Setup
-    Walkthroughs
-    API Reference
-    ?Code Examples
-    ?Pre-Trained Models
-    Extra Resources
+    * [System Setup](#System-Setup)
+    * [Walkthroughs](#Walkthroughs)
+    * [API Reference](#API-Reference)
+    * [Code Examples](#Code Examples) - Scope of functionalities 
+    * [Pre-Trained Models (?)](#Pre-Trained-Models)
+    * [Extra Resources](#Extra-Resources)
+    * [Future improvments](#Future-improvments)
     
-System Setup
-     Jetson Nano set-up
+## System Setup
+  ### Jetson Nano set-up
         Set-up the jetson nano from:  Getting Started with Jetson Nano Developer Kit, follow the explanations of how to flash SD
-     System Requirements
+  ### System Requirements
         1. Check the project requirements, and verify the HW & SW are satisfied:
+           Support python 3.6.9.
            Requirements:
               a. CMake >= 3.10     >> cmake --version
               b. Qt 5              >> qmake --version
@@ -42,17 +45,10 @@ System Setup
                               b. One of 3 elements is a tar file, that provides more flexibility, such as installing multiple versions of TensorRT at the same time. 
                                  In the case of the Uploading version - it's
 
-
-     
-
-           
-
-           
-           
-           Getting the Project - Build the Project from Source 
+         3. Getting the Project - Build the Project from Source 
       
-Walkthrough
-API Reference
+## Walkthrough
+## API Reference
   Python
   Image Recognition 	imageNet 	
   Object Detection 	 	detectNet
@@ -60,13 +56,13 @@ API Reference
 
   These libraries are able to be used in external projects by linking to libjetson-inference and libjetson-utils.
   
-Code Examples
+## Code Examples
 
-Introductory code walkthroughs of using the library are covered during these steps of the Hello AI World tutorial:
+  Introductory code walkthroughs of using the library are covered during these steps of the Hello AI World tutorial:
+  
+## Pre-Trained Models
 
-    Coding Your Own Image Recognition Program (Python)
-    
-Extra Resources
+## Extra Resources
 
   In this area, links and resources for this project:
 
