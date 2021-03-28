@@ -79,9 +79,9 @@ This project is simple Lorem ipsum dolor generator.
 	      if version not 3.6.1:
               $ pip3 install --upgrade protobuf==3.6.1    	      
             
-         6. For CUDA :   ![Version CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), Make necessary adaptations if CUDA 10.2 is required.   
+         6. For CUDA :   ![Version CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), By installing JetPeck 4.5.1, current CUDA version is 10.2. 
            
-         7. For TensorRT:![ We install second TensorRT version](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/).
+         7. For TensorRT:![ We install second TensorRT version](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/). By installing JetPeck 4.5.1, a downgrade version is requierd. 
     
    ### Build the Project from Source  
    
@@ -107,8 +107,8 @@ This project is simple Lorem ipsum dolor generator.
               $ cd build
               $ cmake ../
 	      
-	 5. ![Downloads models & data sample](#https://drive.google.com/drive/folders/1-DDchZQNOWpppNX8udyKj0OViDhYD38O)
-            and extract it to open-adas/models and open-adas/data, respectively.
+	 5. Downloads models & data sample ![here](#https://drive.google.com/drive/folders/1-DDchZQNOWpppNX8udyKj0OViDhYD38O).
+	    Extract it to open-adas/models and open-adas/data, respectively.
 	      
 	 6. Setup virtual CAN (run only once)
 	
