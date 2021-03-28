@@ -40,8 +40,8 @@ This project is simple Lorem ipsum dolor generator.
         | protobuf 3.6.1       | pip3 show protobuf                                                                                |
         | CUDA 10.1 or 10.2    | nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt             |
         |                      |                           >> [nvidia-smi >> command does not support tagra, its a work around]    |  
-        |                      |                           >> cudnn version  >>  dpkg -l | grep cudnn			           |                                               
-	| TensorRT 5.1.5       | dpkg -l | grep TensorRT   >> [TensorRT 7 is not supported for now]. 			           |                                               
+        |                      |                           >> cudnn version  >>  dpkg -l | grep cudnn			           | 
+        | TensorRT 5.1.5       | dpkg -l | grep TensorRT   >> [TensorRT 7 is not supported for now]                                |
         |   OR 6.0.1.8         |                                                                                                   | 
 
 
@@ -81,7 +81,7 @@ This project is simple Lorem ipsum dolor generator.
             
          6. For CUDA :   ![Version CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), Make necessary adaptations if CUDA 10.2 is required.   
            
-         7. For TensorRT:![We install second TensorRT version](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/).
+         7. For TensorRT:![ We install second TensorRT version](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/).
     
    ### Build the Project from Source  
    
@@ -97,7 +97,7 @@ This project is simple Lorem ipsum dolor generator.
               $ git clone https://github.com/vietanhdev/open-adas
 	       
 	 3. Update GPU ARCHS:
-              Modify CMakeLists.txt : 		GPU_ARCHS = 53  
+	      Modify CMakeLists.txt : 		GPU_ARCHS = 53  
 	      To suit your GPU, of the Jetson Nano, https://developer.nvidia.com/cuda-gpus
 	      To support nvcc command:  	SET(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
 	      
@@ -111,9 +111,9 @@ This project is simple Lorem ipsum dolor generator.
             and extract it to open-adas/models and open-adas/data, respectively.
 	      
 	 6. Setup virtual CAN (run only once)
- 	 
-	      $ cd Works/open-adas/build/bin
-	      $ sudo bash setup_vcan.sh
+	
+              $ cd Works/open-adas/build/bin
+              $ sudo bash setup_vcan.sh
 	       
 	 7. Run 
               $ ./OpenADAS
