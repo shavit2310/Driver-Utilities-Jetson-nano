@@ -28,19 +28,20 @@ This project is simple Lorem ipsum dolor generator.
 
          >>Verify python =>3.6.9.             
          >>Verify  Ubuntu 18.04.          
-         >>Verify Jetson Nan0 4GB. 64GB-SD.          
+         >>Verify Jetson Nano 4GB. 64GB-SD.          
        
         | Application          | Verify By                                                                                         |
         | -------------------- | ------------------------------------------------------------------------------------------------- |	
-        | Cmake >= 3.1         | cmake --version                                                                                   |
+        | Cmake >= 3.10        | cmake --version                                                                                   |
         | Qt 5                 | qmake --version                                                                                   |    
-        | OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version`                                                                 |
+        | OpenCV >= 4.0.1      | opencv: /usr/bin/opencv_version                                                                   |
         | C++ 17 compiler      | gcc -v --help 2> /dev/null | sed -n '/^ *-std=\([^<][^ ]\+\).*/ {s//\1/p}'                        |                                        
         |                                                  >> Find c++17 in the list.                                              | 
         | protobuf 3.6.1       | pip3 show protobuf                                                                                |
         | CUDA 10.1 or 10.2    | nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt             |
-        !                      |                           >> [nvidia-smi >> command does not support tagra]                       |  
-        | TensorRT 5.1.5       |  dpkg -l | grep TensorRT  >> [TensorRT 7 is not supported for now].                               |
+        !                      |                           >> [nvidia-smi >> command does not support tagra, its a work around]    |  
+	|                      | cudnn version  >>  dpkg -l | grep cudnn							   |
+        | TensorRT 5.1.5       | dpkg -l | grep TensorRT  >> [TensorRT 7 is not supported for now].                                |
         |   OR 6.0.1.8         |                                                                                                   | 
 
 
@@ -48,50 +49,71 @@ This project is simple Lorem ipsum dolor generator.
          1.  ![For Qt & OpenCv follow](#https://github.com/vietanhdev/open-adas) OR ![here](#https://github.com/vietanhdev/open-adas)  \
          2.  For Cmake installation, 
 
-            $ sudo apt-get install software-properties-common
-            $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
-            $ sudo apt-get update.         When cmake is not yet installed:
-            $ sudo apt-get install cmake.  When cmake is already installed:
-            $ sudo apt-get upgrade
-            $ sudo apt-get install build-essential
-            $ wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
-            $  tar xf cmake-3.2.2.tar.gz
-            $ cd cmake-3.2.2
-            $ ./configure
-            $ cmake
+	      $ sudo apt-get install software-properties-common
+	      $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
+	      $ sudo apt-get update.         When cmake is not yet installed:
+	      $ sudo apt-get install cmake.  When cmake is already installed:
+	      $ sudo apt-get upgrade
+	      $ sudo apt-get install build-essential
+	      $ wget http://www.cmake.org/files/v3.2/cmake-3.20.0.tar.gz
+	      $ sudo tar xf cmake-3.20.0.tar.gz
+	      $ cd cmake-3.20.0
+	      $ sudo ./configure && make 
+	      $ sudo make install
 
          3. If C++ compiler is not as required , The project probably will not run. Should be tested.  
          4. For protobuf do: 
 
-            $ git clone https://github.com/protocolbuffers/protobuf -bv3.6.1 
-            $ cd protobuf
-            $ autoreconf -if  
-            $ ./configure
-            $ make
-            $ make install      
+              $ git clone https://github.com/protocolbuffers/protobuf -bv3.6.1 
+              $ cd protobuf
+              $ autoreconf -if  
+              $ ./configure
+              $ make
+              $ make install      
+	      $ pip3 show protobuf 
+	      if version not 3.6.1:
+	      $ pip3 install --upgrade protobuf==3.6.1
             
          5. For CUDA :  ![Version CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), 
                         Make necessary adaptations if CUDA 10.2 is required.     
          6. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
-                         Since in this project we needed to downgrade the version, we took this approach and kept 2 versions of TensorRT. 
+                         Since in this project we needed to downgrade the version, from the version granted inrhe JetPeck4.5.1, 
+			 ![we install another TensorRT version:](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/)
     
    ### Build the Project from Source  
 
          Python Development Packages
-         By default, Ubuntu comes with the libpython-dev and python-numpy packages pre-installed. These development packages are required for the bindings to build using the 
-         Python C API. So, if you want the project to create bindings for Python 3.6, install these packages before proceeding:
+         1. For Python 3, install these packages before proceeding:
 
               $ sudo apt-get install libpython3-dev python3-numpy
 
-         Configuring CMake
-         Next, create a build directory within the project and run cmake to configure the build. When cmake is run, a script is launched (CMakePreBuild.sh) that will install 
-         any required dependencies and download DNN models for you.
-
-               $ cd AAAAAAA   
-               $ mkdir build
-               $ cd build
-               $ cmake ../
-
+         2. Clone source 
+              $ cd ~   
+              $ mkdir Works
+              $ cd Works
+              $ git clone https://github.com/vietanhdev/open-adas
+	       
+	 3. Update GPU ARCHS
+              Modify CMakeLists.txt : 		GPU_ARCHS = 53  
+	      To suit your GPU, of the Jetson Nano, https://developer.nvidia.com/cuda-gpus
+	      To support nvcc command:  	SET(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
+	       	       
+         4. Build 
+              $ mkdir build
+              $ cd build
+              $ cmake ../
+	      
+	 5. ![Downloads models & data sample](#https://drive.google.com/drive/folders/1-DDchZQNOWpppNX8udyKj0OViDhYD38O)
+            and extract it to open-adas/models and open-adas/data, respectively.
+	      
+	 6. Setup virtual CAN (run only once)
+ 	 
+	      $ cd Works/open-adas/build/bin
+	      $ sudo bash setup_vcan.sh
+	       
+	 7. Run 
+              $ ./OpenADAS
+	       
        note: this command will launch the CMakePreBuild.sh script which asks for sudo privileges while installing some prerequisite packages on the Jetson. 
        The script also downloads pre-trained networks from web services.
       Compiling the Project
