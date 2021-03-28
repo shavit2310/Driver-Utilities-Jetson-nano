@@ -40,20 +40,20 @@ This project is simple Lorem ipsum dolor generator.
         | protobuf 3.6.1       | pip3 show protobuf                                                                                |
         | CUDA 10.1 or 10.2    | nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt             |
         |                      |                           >> [nvidia-smi >> command does not support tagra, its a work around]    |  
-        |                      |                           >> cudnn version  >>  dpkg -l | grep cudnn				   |  
-        | TensorRT 5.1.5       | dpkg -l | grep TensorRT  >> [TensorRT 7 is not supported for now].                                |
+        |                      |                           >> cudnn version  >>  dpkg -l | grep cudnn			           |  
+        | TensorRT 5.1.5       | dpkg -l | grep TensorRT   >> [TensorRT 7 is not supported for now].                               |
         |   OR 6.0.1.8         |                                                                                                   | 
 
 
       B. You can use this Installation list where gaps are found out:      
          1. ![For openCV](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)  \
-         2. For QT installation:  \ 
+         2. For QT installation:   
 
 	      $ sudo apt-get install build-essential
 	      $ sudo apt-get install qt5-default qtcreator qt5-doc qt5-doc-html qtbase5-doc-html qtbase5-examples -y
 	      $ sudo /sbin/ldconfig -v
 	      
-         3. For Cmake installation, 
+         3. For Cmake installation: 
 
 	      $ sudo apt-get install software-properties-common
 	      $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
@@ -67,22 +67,22 @@ This project is simple Lorem ipsum dolor generator.
 	      $ sudo ./configure && make 
 	      $ sudo make install
 
-         3. If C++ compiler is not as required , The project probably will not run. Should be tested.  
-         4. For protobuf do: 
+         4. If C++ compiler is not as required , The project probably will not run. Should be tested.  
+         5. For protobuf installation: 
 
               $ git clone https://github.com/protocolbuffers/protobuf -bv3.6.1 
               $ cd protobuf
               $ autoreconf -if  
               $ ./configure
               $ make
-              $ make install      
-	      $ pip3 show protobuf 
-	      if version not 3.6.1:
-	      $ pip3 install --upgrade protobuf==3.6.1
+              $ make install    
+	      $ pip3 show protobuf
+              if version not 3.6.1:
+              $ pip3 install --upgrade protobuf==3.6.1    	      
             
-         5. For CUDA :  ![Version CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), 
-                        Make necessary adaptations if CUDA 10.2 is required.     
-         6. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
+         6. For CUDA :  ![Version CUDA10.1](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130),    
+         	        Make necessary adaptations if CUDA 10.2 is required.     
+         8. For TensorRT:Provided flexibility, such as installing multiple versions of TensorRT at the same time.    
                          Since in this project we needed to downgrade the version, from the granted in the JetPeck 4.5.1, \
 			 ![we install another TensorRT version:](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/)
     
