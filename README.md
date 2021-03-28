@@ -42,7 +42,8 @@ This project is simple Lorem ipsum dolor generator.
         |                      |                           >> [nvidia-smi >> command does not support tagra, its a work around]    |  
         |                      |                           >> cudnn version  >>  dpkg -l | grep cudnn		                   | 
         | TensorRT 5.1.5       | dpkg -l | grep TensorRT   >> [TensorRT 7 is not supported for now]                                |
-        |   OR 6.0.1.8         |                                                                                                   | 
+        |   OR 6.0.1.8         | 										                   |
+	
 
 
       B. You can use this Installation list where gaps are found out:      
@@ -132,11 +133,8 @@ This project is simple Lorem ipsum dolor generator.
       These also get installed under /usr/local/ during the sudo make install step.
 
       The Python bindings for the PROJECT and jetson.utils modules also get installed during the sudo make install step under /usr/lib/python*/dist-packages/. 
-      If you update the 
-      code, remember to run it again.    
+      If you update the code, remember to run it again.    
       
-      FOR B&R 
-      II. Build and Run
 
  ## WalkThrough
 This project is simple Lorem ipsum dolor generator.
