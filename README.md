@@ -39,15 +39,21 @@ This project is simple Lorem ipsum dolor generator.
         |                                                  >> Find c++17 in the list.                                              | 
         | protobuf 3.6.1       | pip3 show protobuf                                                                                |
         | CUDA 10.1 or 10.2    | nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt             |
-        !                      |                           >> [nvidia-smi >> command does not support tagra, its a work around]    |  
+        |                      |                           >> [nvidia-smi >> command does not support tagra, its a work around]    |  
 	|                      | cudnn version  >>  dpkg -l | grep cudnn							   |
         | TensorRT 5.1.5       | dpkg -l | grep TensorRT  >> [TensorRT 7 is not supported for now].                                |
         |   OR 6.0.1.8         |                                                                                                   | 
 
 
       B. You can use this Installation list where gaps are found out:      
-         1.  ![For Qt & OpenCv follow](#https://github.com/vietanhdev/open-adas) OR ![here](#https://github.com/vietanhdev/open-adas)  \
-         2.  For Cmake installation, 
+         1. ![For openCV](#https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html)\
+         2. For QT installation, 
+
+	      $ sudo apt-get install build-essential
+	      $ sudo apt-get install qt5-default qtcreator qt5-doc qt5-doc-html qtbase5-doc-html qtbase5-examples -y
+	      $ sudo /sbin/ldconfig -v
+	      
+         3. For Cmake installation, 
 
 	      $ sudo apt-get install software-properties-common
 	      $ sudo add-apt-repository ppa:george-edison55/cmake-3.x
@@ -114,20 +120,7 @@ This project is simple Lorem ipsum dolor generator.
 	 7. Run 
               $ ./OpenADAS
 	       
-       note: this command will launch the CMakePreBuild.sh script which asks for sudo privileges while installing some prerequisite packages on the Jetson. 
-       The script also downloads pre-trained networks from web services.
-      Compiling the Project
-
-      Make sure you are still in the ZZZZZZ/build directory, created above.
-
-      Then run make followed by sudo make install to build the libraries, Python extension bindings, and code samples:
-
-               $ cd DDDDDDDDD/build          # omit if working directory is already build/ from above
-               $ make
-               $ sudo make install
-               $ sudo ldconfig
-
-      The project will be built to XXXXX/build/aarch64, with the following directory structure:
+     The project will be built to XXXXX/build/aarch64, with the following directory structure:
 
       |-build
          \aarch64
@@ -146,30 +139,7 @@ This project is simple Lorem ipsum dolor generator.
       
       FOR B&R 
       II. Build and Run
-1. Clone the source code
-cd ~
-mkdir Works
-cd Works
-git clone https://github.com/vietanhdev/open-adas2. Update GPU_ARCHS
-Find these lines in CMakeLists.txt:
-# Set GPU architecture. This decides which instruction set will be used for
-GPU code.
-set(GPU_ARCHS 75) ## config your GPU_ARCHS,See [here]
-(https://developer.nvidia.com/cuda-gpus) for finding what maximum compute
-capability your specific GPU supports.
-Replace 75 with 72 for Jetson Xavier. Please read more on this link.
-3. Download models and sample data
-Download models and sample data here and extract to open-adas/models and open-adas/data.
-4. Build
-mkdir build
-cd build
-cmake ..
-make -j4
-5. Run
-cd ~/Works/open-adas/build/bin
-bash setup_vcan.sh
-./OpenADA
- 
+
  ## WalkThrough
 This project is simple Lorem ipsum dolor generator.
 		    
