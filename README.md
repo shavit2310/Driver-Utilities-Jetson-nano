@@ -40,7 +40,7 @@ This project is simple Lorem ipsum dolor generator.
         | protobuf 3.6.1       | pip3 show protobuf                                                                                |
         | CUDA 10.1 or 10.2    | nvcc --version >>  cd /usr/local/ + nvcc --version Or cat /usr/local/cuda/version.txt             |
         |                      |                           >> [nvidia-smi >> command does not support tagra, its a work around]    |  
-        |                      |                           >> cudnn version  >>  dpkg -l | grep cudnn			           | 
+        |                      |                           >> cudnn version  >>  dpkg -l | grep cudnn		                   | 
         | TensorRT 5.1.5       | dpkg -l | grep TensorRT   >> [TensorRT 7 is not supported for now]                                |
         |   OR 6.0.1.8         |                                                                                                   | 
 
@@ -79,7 +79,7 @@ This project is simple Lorem ipsum dolor generator.
 	      if version not 3.6.1:
               $ pip3 install --upgrade protobuf==3.6.1    	      
             
-         6. For CUDA :   ![Version CUDA10.1, here](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130), By installing JetPeck 4.5.1, current CUDA version is 10.2. 
+         6. For CUDA :   ![Version CUDA10.1, here](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130). By installing JetPeck 4.5.1, current CUDA version is 10.2. 
            
          7. For TensorRT:![ Install second TensorRT version](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/). By installing JetPeck 4.5.1, a downgrade version is requierd. 
     
@@ -106,11 +106,9 @@ This project is simple Lorem ipsum dolor generator.
               $ mkdir build
               $ cd build
               $ cmake ../
-	      
-	 5. Downloads models & data sample ![here](#https://drive.google.com/drive/folders/1-DDchZQNOWpppNX8udyKj0OViDhYD38O).
-	    Extract it to open-adas/models and open-adas/data, respectively.
-	    
-	 5. Download models and data sample ![here](#https://drive.google.com/drive/folders/1-DDchZQNOWpppNX8udyKj0OViDhYD38O) and extract it to open-adas/models and open-adas/data, respectively.
+	         
+	 5. Download models and data sample ![here](#https://drive.google.com/drive/folders/1-DDchZQNOWpppNX8udyKj0OViDhYD38O),
+	    and extract it to open-adas/models and open-adas/data, respectively.
   
 	 6. Setup virtual CAN (run only once)
 	
