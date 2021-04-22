@@ -80,9 +80,9 @@ This project is simple Lorem ipsum dolor generator.
 	      if version not 3.6.1:
               $ pip3 install --upgrade protobuf==3.6.1    	      
             
-         6. For CUDA :   ![Version CUDA10.1, here](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130). By installing JetPeck 4.5.1, current CUDA version is 10.2. 
+         6. For CUDA :   ![Version CUDA10.1, here](#https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130). By installing JetPeck 4.3, current CUDA version is 10.2. 
            
-         7. For TensorRT:![ Install second TensorRT version](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/). By installing JetPeck 4.5.1, a downgrade version is requierd. 
+         7. For TensorRT:![ Install second TensorRT version](#https://docs.donkeycar.com/guide/robot_sbc/tensorrt_jetson_nano/). By installing JetPeck 4.3, a downgrade version is requierd. 
     
    ### Build the Project from Source  
    
